@@ -10,5 +10,7 @@ MAINTAINER martin scharm
 RUN apt-get -y update && \
     apt-get install -y \
             python-pygments \
-            texlive-full
+            texlive-full \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
 
